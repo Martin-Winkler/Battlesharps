@@ -1,0 +1,6 @@
+Z:\csb2\Battleships\cursorGridDrawTest\cursorGridDrawTest\bin\Debug\cursorGridDrawTest.exe.config
+Z:\csb2\Battleships\cursorGridDrawTest\cursorGridDrawTest\obj\Debug\cursorGridDrawTest.csprojResolveAssemblyReference.cache
+Z:\csb2\Battleships\cursorGridDrawTest\cursorGridDrawTest\bin\Debug\cursorGridDrawTest.exe
+Z:\csb2\Battleships\cursorGridDrawTest\cursorGridDrawTest\bin\Debug\cursorGridDrawTest.pdb
+Z:\csb2\Battleships\cursorGridDrawTest\cursorGridDrawTest\obj\Debug\cursorGridDrawTest.exe
+Z:\csb2\Battleships\cursorGridDrawTest\cursorGridDrawTest\obj\Debug\cursorGridDrawTest.pdb

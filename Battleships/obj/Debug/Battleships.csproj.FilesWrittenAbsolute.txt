@@ -1,0 +1,6 @@
+/home/jazoray/winbaku/devmpnt/Battleships/Battleships/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/home/jazoray/winbaku/devmpnt/Battleships/Battleships/bin/Debug/Battleships.exe.config
+/home/jazoray/winbaku/devmpnt/Battleships/Battleships/bin/Debug/Battleships.exe.mdb
+/home/jazoray/winbaku/devmpnt/Battleships/Battleships/bin/Debug/Battleships.exe
+/home/jazoray/winbaku/devmpnt/Battleships/Battleships/obj/Debug/Battleships.exe
+/home/jazoray/winbaku/devmpnt/Battleships/Battleships/obj/Debug/Battleships.exe.mdb

@@ -1,0 +1,21 @@
+
+Delegate- Event algemeiner aufbau:
+
+
+1. : Ein  public delegate  [rückgabetyp] DelegateName [(Parameter, Parameter)];
+
+
+2.: ein public event DelegateName eventName;
+
+3. irgendwo ein EventName += [funktionsname des Abonnenten]
+
+
+
+Event/Delegate:
+
+HomeGrid targetGrid löst ein Event aus, wennn es getroffen wurde, mit koordinaten als Event Args
+
+
+ALLE.jpg Bulkheads abonnieren das Event und schauen über die EventArgs, ob sie getroffen wurden.
+
+wenn, dan hauen sie ein betroffenheitsevent raus, was von beiden grids abonniert wird um die schifffe einzufärben

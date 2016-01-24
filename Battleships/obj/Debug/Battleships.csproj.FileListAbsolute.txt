@@ -1,0 +1,39 @@
+Z:\csb2\Battleships\Battleships\Battleships\bin\Debug\Battleships.exe.config
+Z:\csb2\Battleships\Battleships\Battleships\bin\Debug\Battleships.exe
+Z:\csb2\Battleships\Battleships\Battleships\bin\Debug\Battleships.pdb
+Z:\csb2\Battleships\Battleships\Battleships\obj\Debug\Battleships.csprojResolveAssemblyReference.cache
+Z:\csb2\Battleships\Battleships\Battleships\obj\Debug\Battleships.exe
+Z:\csb2\Battleships\Battleships\Battleships\obj\Debug\Battleships.pdb
+Z:\csb2\Battleships\Battleships\bin\Debug\Battleships.exe.config
+Z:\csb2\Battleships\Battleships\obj\Debug\Battleships.exe
+Z:\csb2\Battleships\Battleships\obj\Debug\Battleships.pdb
+Z:\csb2\Battleships\Battleships\obj\Debug\Battleships.csprojResolveAssemblyReference.cache
+Z:\csb2\Battleships\Battleships\bin\Debug\Battleships.exe
+Z:\csb2\Battleships\Battleships\bin\Debug\Battleships.pdb
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\bin\Debug\Battleships.exe.config
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\obj\Debug\Battleships.exe
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\obj\Debug\Battleships.pdb
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\obj\Debug\Battleships.csprojResolveAssemblyReference.cache
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\bin\Debug\Battleships.exe
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\bin\Debug\Battleships.pdb
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\bin\Debug\Battleships.exe.manifest
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\bin\Debug\Battleships.application
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\obj\Debug\Battleships.exe.manifest
+D:\Winbaku\Eigen\eigen_business\arbeit\Battleships\Battleships\obj\Debug\Battleships.application
+Z:\csb2\Battleships\Battleships\bin\Debug\Battleships.exe.manifest
+Z:\csb2\Battleships\Battleships\bin\Debug\Battleships.application
+Z:\csb2\Battleships\Battleships\obj\Debug\Battleships.exe.manifest
+Z:\csb2\Battleships\Battleships\obj\Debug\Battleships.application
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\bin\Debug\Battleships.exe.config
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\obj\Debug\Battleships.exe
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\obj\Debug\Battleships.pdb
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\obj\Debug\Battleships.csprojResolveAssemblyReference.cache
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\bin\Debug\Battleships.exe.manifest
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\bin\Debug\Battleships.application
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\bin\Debug\Battleships.exe
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\bin\Debug\Battleships.pdb
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\obj\Debug\Battleships.exe.manifest
+Z:\Schulungsgedöns\csb2\Battleships\Battleships\obj\Debug\Battleships.application
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battleships-git\Battleships\bin\Debug\Battleships.exe.config
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battleships-git\Battleships\obj\Debug\Battleships.exe
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battleships-git\Battleships\obj\Debug\Battleships.pdb
