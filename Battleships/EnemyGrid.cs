@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
+    /// <summary>
+    /// the enemyGrid Constitutes the radar which shows the known positions of enemy ships and positions where the player has shot at
+    /// </summary>
     class EnemyGrid : Grid
     {
-        //Enemy Grid stellt das Radar (bekannte Treffer auf Gegnerschiffe) dar
         public delegate void AimAndFireEventHandler(AimAndFireEventArgs e);
         public event AimAndFireEventHandler AimFireEvent;
         protected Coord cursorPosition;
@@ -21,8 +23,15 @@ namespace Battleships
                     {RadarTile.water, ConsoleColor.Cyan},
                     {RadarTile.debris, ConsoleColor.White},
                 };
+
+
+        /// <summary>
+        /// returns the Battleships.RadarTile that corresponds to the passed Battleships.HitDetection
+        /// </summary>
+        /// <param name="hitDetection">the Battleships.Hitdetection that you want to convert to a Battleships.RadarTile</param>
+        /// <returns>the RadarTile that corresponds to the HitDetection</returns>
         private RadarTile HitDetectionAsRadarTile(HitDetection hitDetection)
-        { //gibt für einen Einschlagstyp den dazugehörigen Feldtyp zurück.
+        { 
             switch (hitDetection)
             {
                 case HitDetection.Hit: return RadarTile.ship;
@@ -34,9 +43,15 @@ namespace Battleships
             }
         }
 
+        /// <summary>
+        /// Constructor method for the EnemyGrid class. 
+        /// Creates an EnemyGrid object and initializes with RadarTile.fog in every RadarTile
+        /// to emulate the fog of war.
+        /// </summary>
+        /// <param name="Playertype">whether you want to create the Radartile for the player or the AI opponent.</param>
         public EnemyGrid(Playertype Playertype)
             : base(Playertype, 0)
-        { // erzeugt das radar mit FOW überall
+        {
 
             this.cursorPosition.Col = this.cursorPosition.Row = 5;
             for (int i = 0; i < radartile.GetLength(0) - 1; i++)
@@ -48,11 +63,23 @@ namespace Battleships
             }
             this.Redraw();
         }
+
+
+        /// <summary>
+        /// Returns the color that the tile on the radar should have. The two values passed as parameters constitute the 2-dimensional coordinate that corresponds to a RadarTile.
+        /// </summary>
+        /// <param name="row">the latitudinal coordinate on the grid for which you want the color. 0-Indexed and starting from the top border</param>
+        /// <param name="col"></param>
+        /// <returns></returns>
         protected sealed override ConsoleColor TileAsColor(int row, int col)
         {//gibt zu einer Koordinaten die dazugehörige Farbe zurück
             return tileColorTranslation[this.radartile[row, col]];
         }
 
+        /// <summary>
+        /// controls an interface where the player may choose where to attempt a shot or forfeit the game to quit early
+        /// </summary>
+        /// <returns>returns true if the player forfeited the game</returns>
         public bool AimAndFire()
         { //gibt einen Schuss auf das übergebene Spielfeld ab.
             Console.BackgroundColor = ConsoleColor.Black;
@@ -61,7 +88,7 @@ namespace Battleships
 
             ConsoleKeyInfo myKey;
             do
-            {   //lass den Spieler den Schussort bestimmen
+            {   //let the player choose a coordinate for taking a shot
                 Console.SetCursorPosition(cursorPosition.Col * 4 + 3, cursorPosition.Row * 2 + 2);
                 myKey = Console.ReadKey(true);
                 switch (myKey.Key)
@@ -99,7 +126,6 @@ namespace Battleships
                         AimAndFireEventArgs e = new AimAndFireEventArgs();
                         e.Coord = cursorPosition;
                         AimFireEvent(e);
-                        //Impact impact = targetGrid.ReceiveShot(cursorPosition);
                         Impact impactResult = e.Impact;
                         this.RefreshTiles(impactResult.Coords, this.HitDetectionAsRadarTile(impactResult.HitDetection));
                         break;
@@ -112,6 +138,11 @@ namespace Battleships
             return false;
         }
 
+
+        /// <summary>
+        /// Function for the AI taking a shot
+        /// </summary>
+        /// <param name="coord">coords where the AI wants to take a shot</param>
         public void AimAndFire(Coord coord)
         { //Feuerfunktion für die KI.
 
@@ -128,8 +159,15 @@ namespace Battleships
             }
             this.RefreshTiles(impactResult.Coords, this.HitDetectionAsRadarTile(impactResult.HitDetection));
         }
-        private void RefreshTiles(Coord[] coords, RadarTile toType)  // ändert den Feldtyp der angegebenen Felder 
-        {                                                              // auf dem Radar in den angegebenen Typ.
+
+
+        /// <summary>
+        /// changes a group of tiles to another Type
+        /// </summary>
+        /// <param name="coords">an array of Battleships.Coord, expressing which coordinates should change</param>
+        /// <param name="toType">the Battleships.RadarTile to change the Tiles at the given coords to</param>
+        private void RefreshTiles(Coord[] coords, RadarTile toType)  
+        {                                                            
             for (int i = 0; i < coords.Length; i++)
             {
                 Coord coord = coords[i];
@@ -138,6 +176,10 @@ namespace Battleships
             this.Redraw();
         }
     }
+
+    /// <summary>
+    /// all possible states that a RadarTile of a Battleships.EnemyGrid can be in
+    /// </summary>
 	enum RadarTile 
 	{
 		fog,
@@ -145,7 +187,5 @@ namespace Battleships
 		water,
         debris
 	}
-
-
 }
 

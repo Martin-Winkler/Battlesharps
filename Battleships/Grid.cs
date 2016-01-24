@@ -5,6 +5,10 @@ using System.Text;
 
 namespace Battleships
 {
+    /// <summary>
+    /// the abstract Grid class serves as the base class for both the Home Grid, in which the players' own ships are displayed
+    /// as well as the Enemy grid, in which a players past shots and known positions of enemy ships are displayed
+    /// </summary>
     abstract class Grid
     {
         protected readonly Playertype _PLAYERTYPE;

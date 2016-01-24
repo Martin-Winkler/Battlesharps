@@ -8,7 +8,12 @@ namespace Battleships
 {
     class Fleet
     {
-        public Ship[] ships = new Ship[7];
+        public Ship[] Ships
+        {
+            get { return this.ships; }
+        }
+
+        private Ship[] ships = new Ship[7];
 
 		public int ShipCount 
 		{  //gibt die Anzahl der Schiffe in der Flotte zurück
@@ -22,9 +27,11 @@ namespace Battleships
             return this.ships[index];
         }
 
-
+        /// <summary>
+        /// Constructor for the Fleet class. Creates a Fleet of ships in the right size and the right amounts.
+        /// </summary>
         public Fleet()
-        { //erzeugt die richtige Anzahl Schiffe in der richtigen größe
+        { 
             for (int i = 0; i <= ships.Length-1; i++)
             {
                 if (i<3)

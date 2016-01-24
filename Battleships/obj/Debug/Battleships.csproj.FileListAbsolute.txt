@@ -37,3 +37,6 @@ Z:\Schulungsgedöns\csb2\Battleships\Battleships\obj\Debug\Battleships.applicati
 D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battleships-git\Battleships\bin\Debug\Battleships.exe.config
 D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battleships-git\Battleships\obj\Debug\Battleships.exe
 D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battleships-git\Battleships\obj\Debug\Battleships.pdb
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\bin\Debug\Battleships.exe.config
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\obj\Debug\Battleships.exe
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\obj\Debug\Battleships.pdb

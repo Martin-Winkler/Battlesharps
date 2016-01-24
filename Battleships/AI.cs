@@ -13,9 +13,8 @@ namespace Battleships
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="playerHomeGrid"></param>
         /// <param name="aiEnemyGrid"></param>
-        public static void Turn(HomeGrid playerHomeGrid, EnemyGrid aiEnemyGrid)
+        public static void Turn(EnemyGrid aiEnemyGrid)
         {
             //führt den spielzug des Computergegners durch
             Coord coord = new Coord();

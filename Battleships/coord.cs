@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
+    /// <summary>
+    /// a more human-readable way to representing a 2-dimensional coordinate instead of using x and y or individual variables
+    /// </summary>
     struct Coord
     {
         int row;
@@ -34,12 +37,16 @@ namespace Battleships
         {
             this = coord;
         }
-
+        /// <summary>
+        /// checks if two passed coordinates are Equal
+        /// </summary>
+        /// <param name="Operand1">first Coord object to check</param>
+        /// <param name="Operand2">second Coord object to check</param>
+        /// <returns>true if the two Coords are the same, otherwise false</returns>
         public static bool Equals(Coord Operand1, Coord Operand2)
-        {// überprüft, ob bei zwei übergebenen Coord-Variablen beide Werte gleich sind
+        {
             bool result = (Operand1.Col == Operand2.Col && Operand1.Row == Operand2.Row);
             return result;
-
         }
     }
 }

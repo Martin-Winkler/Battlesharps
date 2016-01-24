@@ -13,31 +13,31 @@ namespace Battleships
 
         static void Main(string[] args)
         {
-            //Umgebung vorbereiten
+            //Prepare Operating-system independent environment and initialize some variables
             _winner = Winner.undetermined;
             Console.WindowWidth = 100;
 			Console.ForegroundColor = ConsoleColor.Gray;
             
-            //Spielfelder auf denen die eigenen Schiffe dargestellt werden erzeugen
+            //Create and initialize playing grids in which each player can see their own ships
             HomeGrid playerHomeGrid = new HomeGrid(Playertype.Human);
             HomeGrid aiHomeGrid = new HomeGrid(Playertype.AI);
 
-            //Radarfelder initialisieren
+            //Create and initialize radar Grids in which each player can 
             EnemyGrid playerEnemyGrid = new EnemyGrid(Playertype.Human);
             EnemyGrid AIEnemyGrid = new EnemyGrid(Playertype.AI);
 
-            //Schiffe  platzieren
+            //fleet deployment (currently automatic)
 			Fleet playerFleet = new Fleet();
             Fleet aiFleet = new Fleet();
-            playerHomeGrid.DeployFleet(playerFleet.ships);
-            aiHomeGrid.DeployFleet(aiFleet.ships);
+            playerHomeGrid.DeployFleet(playerFleet.Ships);
+            aiHomeGrid.DeployFleet(aiFleet.Ships);
             bool forfeit=false;
 
-            // Schusswechsel-Events abonnieren
+            // subscribe to fire-exchange events
             playerEnemyGrid.AimFireEvent += aiHomeGrid.ReceiveShot;
             AIEnemyGrid.AimFireEvent += playerHomeGrid.ReceiveShot;
 
-            //spielablauf
+            //Main game phase
             do
             {
                 forfeit = playerEnemyGrid.AimAndFire();  
@@ -45,7 +45,7 @@ namespace Battleships
   
             } while (Winner == Winner.undetermined && !forfeit);
 
-            //spielende
+            //End of the game
             Console.SetCursorPosition(0, 23);
 
             if (forfeit)
@@ -61,9 +61,13 @@ namespace Battleships
             Console.ReadLine();
 			
         }
-
+        /// <summary>
+        /// Determines the winner by being told who has lost
+        /// </summary>
+        /// <param name="loser">The player who lost THE GAME</param>
+        /// <returns></returns>
         public static Winner DetermineWinner(Playertype loser)
-        { //ermittelt den Gewinner anhand des Verlierers
+        { 
             Winner result;
             if (loser==Playertype.Human)
             {
