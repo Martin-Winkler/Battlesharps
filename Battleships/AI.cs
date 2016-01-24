@@ -5,8 +5,16 @@ using System.Text;
 
 namespace Battleships
 {
+    /// <summary>
+    /// Class that implements all the behavior of the AI opponent
+    /// </summary>
     static class AI
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="playerHomeGrid"></param>
+        /// <param name="aiEnemyGrid"></param>
         public static void Turn(HomeGrid playerHomeGrid, EnemyGrid aiEnemyGrid)
         {
             //führt den spielzug des Computergegners durch

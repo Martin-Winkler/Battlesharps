@@ -41,7 +41,7 @@ namespace Battleships
             do
             {
                 forfeit = playerEnemyGrid.AimAndFire();  
-                if (Winner == Winner.undetermined && !forfeit) AI.Turn(playerHomeGrid, AIEnemyGrid);
+                if (Winner == Winner.undetermined && !forfeit) AI.Turn(AIEnemyGrid);
   
             } while (Winner == Winner.undetermined && !forfeit);
 
