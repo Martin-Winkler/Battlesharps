@@ -11,6 +11,7 @@ namespace Battleships
         public Ship[] Ships
         {
             get { return this.ships; }
+            set { this.ships = value; }
         }
 
         private Ship[] ships = new Ship[7];

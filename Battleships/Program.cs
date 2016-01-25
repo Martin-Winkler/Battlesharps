@@ -29,8 +29,8 @@ namespace Battleships
             //fleet deployment (currently automatic)
 			Fleet playerFleet = new Fleet();
             Fleet aiFleet = new Fleet();
-            playerHomeGrid.DeployFleet(playerFleet.Ships);
-            aiHomeGrid.DeployFleet(aiFleet.Ships);
+            playerHomeGrid.DeployFleet(playerFleet);
+            aiHomeGrid.DeployFleet(aiFleet);
             bool forfeit=false;
 
             // subscribe to fire-exchange events
