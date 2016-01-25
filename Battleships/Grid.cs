@@ -18,12 +18,15 @@ namespace Battleships
         protected readonly int CursorLeftStart;
         public delegate ConsoleColor TranslateTile();
 
+        /// <summary>
+        /// Draws any Grid as ascii-art. (polymorphic)
+        /// </summary>
         protected virtual void Redraw()
-        { //gibt das Radar als Ascii-Art aus
+        { 
             if (_PLAYERTYPE == Playertype.Human)
             {
                 Console.SetCursorPosition(0, 0);
-                Console.CursorLeft = CursorLeftStart;
+                Console.CursorLeft = CursorLeftStart; // it's good knowing that calling this polymorphic function can uses vatriables that have their values in derived classes
 
                 Console.WriteLine(" | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |");
                 Console.CursorLeft = CursorLeftStart;
@@ -47,18 +50,27 @@ namespace Battleships
             }
         }
 
+        /// <summary>
+        /// abstract function returning Grid color at a given coordinate. Derived classes must implement this function.
+        /// </summary>
+        /// <param name="col">the latitudinal coordinate on the grid for which you want the color. 0-Indexed and starting from the top border</param>
+        /// <param name="row">the longitudinal coordinate on the grid for which you want the color. 0-Indexed and starting from the left border</param>
+        /// <returns></returns>
         protected abstract ConsoleColor TileAsColor(int col, int row);
 
+        /// <summary>
+        /// constructor for the abstract grid class
+        /// </summary>
+        /// <param name="PLAYERTYPE">whether the grid to be created is for a human or nonhuman player</param>
+        /// <param name="cursorLeftStart">where to position the grid</param>
         public Grid(Playertype PLAYERTYPE, int cursorLeftStart)
         {
             this._PLAYERTYPE = PLAYERTYPE;
             this.CursorLeftStart = cursorLeftStart;
         }
-
-        protected abstract class TileTranslation
-        {
-        }
     }
+
+
 
     class AimAndFireEventArgs : System.EventArgs
     {

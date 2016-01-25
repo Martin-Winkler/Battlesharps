@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Battleships
 {
+
+    /// <summary>
+    /// implements the logic and design of the players own grid, where he sees the demployment and layout 
+    /// </summary>
     class HomeGrid : Grid
     {
         protected Ship[] _ships;
@@ -20,6 +24,10 @@ namespace Battleships
                 {TileContent.sunkShip, ConsoleColor.White}
             };
 
+        /// <summary>
+        /// Automatically deploys a fleet of ships
+        /// </summary>
+        /// <param name="ships">the fleet of ships to deploy</param>
         public void DeployFleet(Ship[] ships)
         { // platziert alle schiffe der Flotte  an zufälligen Orten
             Random rnd = new Random(DateTime.Now.Ticks.GetHashCode());
@@ -41,6 +49,8 @@ namespace Battleships
             _ships = ships;
             this.Redraw();
         }
+
+
         public HomeGrid(Playertype playertype)
             : base(playertype, 50)
         {

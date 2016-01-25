@@ -69,7 +69,7 @@ namespace Battleships
         /// Returns the color that the tile on the radar should have. The two values passed as parameters constitute the 2-dimensional coordinate that corresponds to a RadarTile.
         /// </summary>
         /// <param name="row">the latitudinal coordinate on the grid for which you want the color. 0-Indexed and starting from the top border</param>
-        /// <param name="col"></param>
+        /// <param name="col">the longitudinal coordinate on the grid for which you want the color. 0-Indexed and starting from the left border</param>
         /// <returns></returns>
         protected sealed override ConsoleColor TileAsColor(int row, int col)
         {//gibt zu einer Koordinaten die dazugehörige Farbe zurück
