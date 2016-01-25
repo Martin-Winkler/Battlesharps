@@ -29,7 +29,7 @@ namespace Battleships
         /// </summary>
         /// <param name="ships">the fleet of ships to deploy</param>
         public void DeployFleet(Ship[] ships)
-        { // platziert alle schiffe der Flotte  an zufälligen Orten
+        {   //currently implemented as random and stupid
             Random rnd = new Random(DateTime.Now.Ticks.GetHashCode());
             bool[] used = new bool[10];
             foreach (var ship in ships)
@@ -37,7 +37,7 @@ namespace Battleships
                 Coord coord = new Coord();              //freien platz finden
                 coord.Col = rnd.Next(9 - ship.Size);
 
-                do //verhindern, dass  zwei schiffe in die gleiche Zeile gepackt werden.
+                do // dont put two ships in the same row
                 {
                     coord.Row = rnd.Next(10);
                 } while (used[coord.Row]);
@@ -50,13 +50,20 @@ namespace Battleships
             this.Redraw();
         }
 
-
+        /// <summary>
+        /// call the base class constructor to create the homegrid. 
+        /// </summary>
+        /// <param name="playertype">the horizontal location on the cli where the grid should be drawn</param>
         public HomeGrid(Playertype playertype)
             : base(playertype, 50)
         {
            
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="e"></param>
         public void ReceiveShot(AimAndFireEventArgs e)
         { //erhält eine Kordinate, wo hingeschossen wurde
             //und fragt jedes seine Schiffe, ob es an dieser Stelle getroffen wurde

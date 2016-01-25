@@ -5,8 +5,12 @@ using System.Text;
 
 namespace Battleships
 {
+
+    /// <summary>
+    /// represents a  shot impact and its location, and whether that impact hit or sunk a ship
+    /// </summary>
     class Impact
-    { //speichert einen Einschlag von Beschuss, und ob dieser Einschlag ein schiff getroffen oder versenkt hat
+    { 
         HitDetection _hitDetection;
         Coord[] coords;
 
