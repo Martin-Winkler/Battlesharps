@@ -15,8 +15,17 @@ namespace Battleships
         {
             //Prepare Operating-system independent environment and initialize some variables
             _winner = Winner.undetermined;
-            Console.WindowWidth = 100;
-			Console.ForegroundColor = ConsoleColor.Gray;
+            if (PlatformID.Win32NT == Environment.OSVersion.Platform) 
+            {
+                Console.WindowWidth = 100;
+            } 
+            else
+            {
+                Console.WriteLine("Please make sure that your Terminal Window is at least 100 characters wide");
+                Console.WriteLine("Press any key to cotinue when ready...")
+                Console.ReadKey();
+            }
+	        Console.ForegroundColor = ConsoleColor.Gray;
             
             //Create and initialize playing grids in which each player can see their own ships
             HomeGrid playerHomeGrid = new HomeGrid(Playertype.Human);
