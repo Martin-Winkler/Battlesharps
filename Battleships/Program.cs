@@ -27,7 +27,7 @@ namespace Battleships
             else
             {
                 Console.WriteLine("Please make sure that your Terminal Window is at least 100 characters wide");
-                Console.WriteLine("Press any key to cotinue when ready...")
+                Console.WriteLine("Press any key to cotinue when ready...");
                 Console.ReadKey();
             }
 	        Console.ForegroundColor = ConsoleColor.Gray;
