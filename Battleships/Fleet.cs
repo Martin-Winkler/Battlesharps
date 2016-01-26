@@ -48,6 +48,8 @@ namespace Battleships
                     ships[i] = new Ship(1);
                 } 
             }
+
+
         }
     }
 }
