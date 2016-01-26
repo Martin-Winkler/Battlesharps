@@ -12,7 +12,7 @@ namespace Battleships
     /// </summary>
     class HomeGrid : Grid
     {
-        protected Ship[] _ships;
+        protected Fleet fleet;
         protected TileContent[,] homeTiles = new TileContent[10, 10];
         protected static Dictionary<TileContent, ConsoleColor> tileColorTranslation =
             new Dictionary<TileContent, ConsoleColor>() 
@@ -28,11 +28,11 @@ namespace Battleships
         /// Automatically deploys a fleet of ships
         /// </summary>
         /// <param name="ships">the fleet of ships to deploy</param>
-        public void DeployFleet(Ship[] ships)
+        public void DeployFleet(Fleet Fleet)
         {   //currently implemented as random and stupid
             Random rnd = new Random(DateTime.Now.Ticks.GetHashCode());
             bool[] used = new bool[10];
-            foreach (var ship in ships)
+            foreach (var ship in Fleet.Ships)
             {
                 Coord coord = new Coord();              //freien platz finden
                 coord.Col = rnd.Next(9 - ship.Size);
@@ -46,8 +46,14 @@ namespace Battleships
                 Coord[] coords = ship.Move(coord, false);
                 this.RefreshTiles(coords, TileContent.ship);
             }
-            _ships = ships;
+            
+            this.fleet = Fleet;
             this.Redraw();
+        }
+
+        internal void DeployFleetManual(Fleet fleet)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -69,9 +75,9 @@ namespace Battleships
             //und fragt jedes seine Schiffe, ob es an dieser Stelle getroffen wurde
 
             Impact result = new Impact();
-            for (int i = 0; i < _ships.Length; i++)
+            for (int i = 0; i < fleet.Ships.Length; i++)
             {
-                result = _ships[i].TryToGetHit(e.Coord);
+                result = fleet.Ships[i].TryToGetHit(e.Coord);
                 if (result.HitDetection != HitDetection.Miss) //wenn ein Schiff getroffen wurde, 
                 {                                             //  müssen wir nicht mehr prüfen, 
                     break;                                    //ob ein anderes Schiff getroffen wurde
@@ -80,9 +86,9 @@ namespace Battleships
             if (result.HitDetection == HitDetection.Sink)   //wenn das getroffene schiff versenkt wurde,
             {                                               //dann prüfen ob dieses Versenken das Spiel entschieden hat
                 bool defeat = false;
-                for (int i = 0; i < _ships.Length; i++)
+                for (int i = 0; i < fleet.Ships.Length; i++)
                 {
-                    defeat = _ships[i].Destroyed;
+                    defeat = fleet.Ships[i].Destroyed;
                     if (!defeat) break;
                 }
                 if (defeat)

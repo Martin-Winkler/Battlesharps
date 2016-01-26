@@ -40,3 +40,10 @@ D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battleships-git\Batt
 D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\bin\Debug\Battleships.exe.config
 D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\obj\Debug\Battleships.exe
 D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\obj\Debug\Battleships.pdb
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\bin\Debug\Battleships.exe.manifest
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\bin\Debug\Battleships.application
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\bin\Debug\Battleships.exe
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\bin\Debug\Battleships.pdb
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\obj\Debug\Battleships.csprojResolveAssemblyReference.cache
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\obj\Debug\Battleships.exe.manifest
+D:\Winbaku\Eigen\eigen_business\arbeit\Development projects\Battlesharps\Battleships\obj\Debug\Battleships.application
