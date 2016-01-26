@@ -15,11 +15,6 @@ namespace Battleships
         {
             //Prepare Operating-system independent environment and initialize some variables
             _winner = Winner.undetermined;
-<<<<<<< HEAD
-            if (PlatformID.Win32NT == Environment.OSVersion.Platform) Console.WindowWidth = 100;
-            Console.ReadKey();
-            Console.ForegroundColor = ConsoleColor.Gray;
-=======
             if (PlatformID.Win32NT == Environment.OSVersion.Platform) 
             {
                 Console.WindowWidth = 100;
@@ -31,7 +26,6 @@ namespace Battleships
                 Console.ReadKey();
             }
 	        Console.ForegroundColor = ConsoleColor.Gray;
->>>>>>> refs/remotes/origin/master
             
             //Create and initialize playing grids in which each player can see their own ships
             HomeGrid playerHomeGrid = new HomeGrid(Playertype.Human);
